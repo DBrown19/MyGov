@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		635ED8B21F138DCF0039F36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635ED8B11F138DCF0039F36D /* AppDelegate.swift */; };
-		635ED8B41F138DCF0039F36D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635ED8B31F138DCF0039F36D /* FirstViewController.swift */; };
-		635ED8B61F138DCF0039F36D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635ED8B51F138DCF0039F36D /* SecondViewController.swift */; };
+		635ED8B41F138DCF0039F36D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635ED8B31F138DCF0039F36D /* SettingsViewController.swift */; };
+		635ED8B61F138DCF0039F36D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635ED8B51F138DCF0039F36D /* MapViewController.swift */; };
 		635ED8B91F138DCF0039F36D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635ED8B71F138DCF0039F36D /* Main.storyboard */; };
 		635ED8BB1F138DCF0039F36D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635ED8BA1F138DCF0039F36D /* Assets.xcassets */; };
 		635ED8BE1F138DCF0039F36D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635ED8BC1F138DCF0039F36D /* LaunchScreen.storyboard */; };
+		638CBA731F13CEA500EBB8C3 /* SenateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638CBA721F13CEA500EBB8C3 /* SenateTableViewController.swift */; };
+		638CBA751F13CEB900EBB8C3 /* SenateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638CBA741F13CEB900EBB8C3 /* SenateCell.swift */; };
+		638CBA771F13CF8100EBB8C3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638CBA761F13CF8100EBB8C3 /* InfoViewController.swift */; };
+		638CBA791F13CF9100EBB8C3 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638CBA781F13CF9100EBB8C3 /* EmailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		635ED8AE1F138DCF0039F36D /* MyGov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635ED8B11F138DCF0039F36D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		635ED8B31F138DCF0039F36D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		635ED8B51F138DCF0039F36D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		635ED8B31F138DCF0039F36D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		635ED8B51F138DCF0039F36D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		635ED8B81F138DCF0039F36D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		635ED8BA1F138DCF0039F36D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		635ED8BD1F138DCF0039F36D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		635ED8BF1F138DCF0039F36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		638CBA721F13CEA500EBB8C3 /* SenateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenateTableViewController.swift; sourceTree = "<group>"; };
+		638CBA741F13CEB900EBB8C3 /* SenateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenateCell.swift; sourceTree = "<group>"; };
+		638CBA761F13CF8100EBB8C3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		638CBA781F13CF9100EBB8C3 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				635ED8B11F138DCF0039F36D /* AppDelegate.swift */,
-				635ED8B31F138DCF0039F36D /* FirstViewController.swift */,
-				635ED8B51F138DCF0039F36D /* SecondViewController.swift */,
+				635ED8B31F138DCF0039F36D /* SettingsViewController.swift */,
+				635ED8B51F138DCF0039F36D /* MapViewController.swift */,
 				635ED8B71F138DCF0039F36D /* Main.storyboard */,
+				638CBA761F13CF8100EBB8C3 /* InfoViewController.swift */,
+				638CBA781F13CF9100EBB8C3 /* EmailViewController.swift */,
+				638CBA721F13CEA500EBB8C3 /* SenateTableViewController.swift */,
+				638CBA741F13CEB900EBB8C3 /* SenateCell.swift */,
 				635ED8BA1F138DCF0039F36D /* Assets.xcassets */,
 				635ED8BC1F138DCF0039F36D /* LaunchScreen.storyboard */,
 				635ED8BF1F138DCF0039F36D /* Info.plist */,
@@ -139,9 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				635ED8B61F138DCF0039F36D /* SecondViewController.swift in Sources */,
+				635ED8B61F138DCF0039F36D /* MapViewController.swift in Sources */,
+				638CBA731F13CEA500EBB8C3 /* SenateTableViewController.swift in Sources */,
+				638CBA751F13CEB900EBB8C3 /* SenateCell.swift in Sources */,
 				635ED8B21F138DCF0039F36D /* AppDelegate.swift in Sources */,
-				635ED8B41F138DCF0039F36D /* FirstViewController.swift in Sources */,
+				638CBA771F13CF8100EBB8C3 /* InfoViewController.swift in Sources */,
+				638CBA791F13CF9100EBB8C3 /* EmailViewController.swift in Sources */,
+				635ED8B41F138DCF0039F36D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +321,7 @@
 				635ED8C41F138DCF0039F36D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
