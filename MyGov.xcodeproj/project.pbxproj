@@ -17,6 +17,9 @@
 		638CBA751F13CEB900EBB8C3 /* SenateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638CBA741F13CEB900EBB8C3 /* SenateCell.swift */; };
 		638CBA771F13CF8100EBB8C3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638CBA761F13CF8100EBB8C3 /* InfoViewController.swift */; };
 		638CBA791F13CF9100EBB8C3 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638CBA781F13CF9100EBB8C3 /* EmailViewController.swift */; };
+		639E88BF1F1517B800D290B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 639E88BE1F1517B800D290B9 /* GoogleService-Info.plist */; };
+		639E88C11F16674000D290B9 /* Senator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E88C01F16674000D290B9 /* Senator.swift */; };
+		787CC873F399A633FD1FA135 /* Pods_MyGov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87F007407DEA32A43BED5AD /* Pods_MyGov.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,11 @@
 		638CBA741F13CEB900EBB8C3 /* SenateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenateCell.swift; sourceTree = "<group>"; };
 		638CBA761F13CF8100EBB8C3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		638CBA781F13CF9100EBB8C3 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		639E88BE1F1517B800D290B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		639E88C01F16674000D290B9 /* Senator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Senator.swift; sourceTree = "<group>"; };
+		74A715529CD92C4A504D9F4C /* Pods-MyGov.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGov.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyGov/Pods-MyGov.debug.xcconfig"; sourceTree = "<group>"; };
+		B3320302B084EA5A54015C1F /* Pods-MyGov.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGov.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyGov/Pods-MyGov.release.xcconfig"; sourceTree = "<group>"; };
+		E87F007407DEA32A43BED5AD /* Pods_MyGov.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGov.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787CC873F399A633FD1FA135 /* Pods_MyGov.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52821B6F113990FCBFFC506D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74A715529CD92C4A504D9F4C /* Pods-MyGov.debug.xcconfig */,
+				B3320302B084EA5A54015C1F /* Pods-MyGov.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		635ED8A51F138DCF0039F36D = {
 			isa = PBXGroup;
 			children = (
 				635ED8B01F138DCF0039F36D /* MyGov */,
 				635ED8AF1F138DCF0039F36D /* Products */,
+				52821B6F113990FCBFFC506D /* Pods */,
+				8FE67518395B45089813A4C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,8 +95,18 @@
 				635ED8BA1F138DCF0039F36D /* Assets.xcassets */,
 				635ED8BC1F138DCF0039F36D /* LaunchScreen.storyboard */,
 				635ED8BF1F138DCF0039F36D /* Info.plist */,
+				639E88BE1F1517B800D290B9 /* GoogleService-Info.plist */,
+				639E88C01F16674000D290B9 /* Senator.swift */,
 			);
 			path = MyGov;
+			sourceTree = "<group>";
+		};
+		8FE67518395B45089813A4C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E87F007407DEA32A43BED5AD /* Pods_MyGov.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 635ED8C21F138DCF0039F36D /* Build configuration list for PBXNativeTarget "MyGov" */;
 			buildPhases = (
+				3B1933131534B0646E44F5D2 /* [CP] Check Pods Manifest.lock */,
 				635ED8AA1F138DCF0039F36D /* Sources */,
 				635ED8AB1F138DCF0039F36D /* Frameworks */,
 				635ED8AC1F138DCF0039F36D /* Resources */,
+				CDE057483C8CFAA33924B1EF /* [CP] Embed Pods Frameworks */,
+				597FC0B35F14E78A1736FD17 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,12 +172,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				635ED8BE1F138DCF0039F36D /* LaunchScreen.storyboard in Resources */,
+				639E88BF1F1517B800D290B9 /* GoogleService-Info.plist in Resources */,
 				635ED8BB1F138DCF0039F36D /* Assets.xcassets in Resources */,
 				635ED8B91F138DCF0039F36D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B1933131534B0646E44F5D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyGov-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		597FC0B35F14E78A1736FD17 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGov/Pods-MyGov-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDE057483C8CFAA33924B1EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyGov/Pods-MyGov-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGov/Pods-MyGov-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		635ED8AA1F138DCF0039F36D /* Sources */ = {
@@ -155,6 +247,7 @@
 				638CBA731F13CEA500EBB8C3 /* SenateTableViewController.swift in Sources */,
 				638CBA751F13CEB900EBB8C3 /* SenateCell.swift in Sources */,
 				635ED8B21F138DCF0039F36D /* AppDelegate.swift in Sources */,
+				639E88C11F16674000D290B9 /* Senator.swift in Sources */,
 				638CBA771F13CF8100EBB8C3 /* InfoViewController.swift in Sources */,
 				638CBA791F13CF9100EBB8C3 /* EmailViewController.swift in Sources */,
 				635ED8B41F138DCF0039F36D /* SettingsViewController.swift in Sources */,
@@ -280,6 +373,7 @@
 		};
 		635ED8C31F138DCF0039F36D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74A715529CD92C4A504D9F4C /* Pods-MyGov.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyGov/Info.plist;
@@ -292,6 +386,7 @@
 		};
 		635ED8C41F138DCF0039F36D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3320302B084EA5A54015C1F /* Pods-MyGov.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyGov/Info.plist;
