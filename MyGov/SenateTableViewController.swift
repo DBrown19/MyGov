@@ -16,10 +16,6 @@ class SenateTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
         
         Alamofire.request("https://mygov-ecfe0.firebaseio.com/senators.json").responseJSON(completionHandler: {
             response in
@@ -40,7 +36,13 @@ class SenateTableViewController: UITableViewController {
             }
             
         })
+
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+           }
 
     // MARK: - Table view data source
 
@@ -56,10 +58,30 @@ class SenateTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "senatorCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = senators[indexPath.row].stateName
-        cell.detailTextLabel?.text = senators[indexPath.row].stateCode
+        let name1 = senators[indexPath.row].firstName
+        let namespace = " "
+        let name2 = senators[indexPath.row].lastName
+        let fullName = name1! + namespace + name2!
+
+        
+        /* Trying to use this to indicate party by manipulating string
+        if senateParty = "republican" {
+            let fullName = name1! + namespace + name2! + " (R)"
+            
+        } else {
+           
+            let fullName = name1! + namespace + name2! + " (D)"
+
+        }
+         */
+        
+        print(fullName)
+        
+        cell.textLabel?.text = fullName
+        cell.detailTextLabel?.text = senators[indexPath.row].stateName
 
         return cell
     }
+    
 
 }
