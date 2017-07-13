@@ -12,6 +12,7 @@ target 'MyGov' do
   pod 'Gloss'
   
   pod 'Alamofire'
+  pod 'AlamofireImage', '~> 3.1'
   
   pod 'FacebookCore'
   pod 'FacebookLogin'

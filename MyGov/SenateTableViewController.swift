@@ -42,7 +42,20 @@ class SenateTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-           }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segue1" {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)
+            let selectedSenator = senators[(indexPath?.row)!]
+            
+            let infoVC = segue.destination as! InfoViewController
+            infoVC.senator = selectedSenator
+        }
+        
+    }
 
     // MARK: - Table view data source
 
@@ -84,7 +97,9 @@ class SenateTableViewController: UITableViewController {
        
         print("this works")
         
-        performSegue(withIdentifier: "segue1", sender: self)
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        performSegue(withIdentifier: "segue1", sender: cell)
         
     }
 

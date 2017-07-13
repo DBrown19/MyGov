@@ -57,14 +57,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pHL-4G-Ftb">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <segue destination="BIM-i1-h6t" kind="show" id="1Go-Pq-Gd4"/>
-                            </connections>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="senatorCell" textLabel="vec-dQ-ADq" detailTextLabel="ISD-Iu-Pj3" style="IBUITableViewCellStyleSubtitle" id="Uxe-rm-dUR">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -131,30 +123,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txw-ba-nYw">
-                                <rect key="frame" x="155" y="458" width="64" height="64"/>
-                                <state key="normal" title="e-mail" image="Mail Icon"/>
+                                <rect key="frame" x="155" y="458" width="50" height="50"/>
+                                <state key="normal" image="Mail Icon"/>
                                 <connections>
-                                    <segue destination="iWr-G3-Zp6" kind="show" id="rUZ-VR-UaC"/>
+                                    <action selector="sendEmail:" destination="BIM-i1-h6t" eventType="touchUpInside" id="cbZ-Lf-EDc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggf-Hj-lcH">
-                                <rect key="frame" x="202" y="115" width="134" height="21"/>
+                                <rect key="frame" x="155" y="115" width="204" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezq-iK-pyE">
-                                <rect key="frame" x="202" y="144" width="123" height="21"/>
+                                <rect key="frame" x="155" y="182" width="204" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Party" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFY-1X-1Uc">
-                                <rect key="frame" x="202" y="173" width="79" height="21"/>
+                                <rect key="frame" x="155" y="245" width="204" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -167,7 +159,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="zia-La-KQl"/>
                     <connections>
-                        <segue destination="iWr-G3-Zp6" kind="show" id="v1e-qw-b31"/>
+                        <outlet property="nameLabel" destination="ggf-Hj-lcH" id="8xG-Sq-hO5"/>
+                        <outlet property="partyLabel" destination="aFY-1X-1Uc" id="gDv-nf-hha"/>
+                        <outlet property="stateLabel" destination="Ezq-iK-pyE" id="KfO-Gr-ECf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkn-bD-X6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -266,8 +260,4 @@
         <image name="politician" width="24" height="24"/>
         <image name="settings" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="v1e-qw-b31"/>
-        <segue reference="dHX-nU-bca"/>
-    </inferredMetricsTieBreakers>
 </document>
