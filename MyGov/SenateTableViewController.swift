@@ -13,7 +13,7 @@ import Gloss
 class SenateTableViewController: UITableViewController {
     
     var senators: [Senator] = []
-    
+    var myIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,20 +61,16 @@ class SenateTableViewController: UITableViewController {
         let name1 = senators[indexPath.row].firstName
         let namespace = " "
         let name2 = senators[indexPath.row].lastName
-        let fullName = name1! + namespace + name2!
-
         
-        /* Trying to use this to indicate party by manipulating string
-        if senateParty = "republican" {
-            let fullName = name1! + namespace + name2! + " (R)"
-            
+        var fullName = name1! + namespace + name2!
+
+        // Trying to use this to indicate party by manipulating string
+        if senators[indexPath.row].senateParty == "republican" {
+            fullName = name1! + namespace + name2! + " (R)"
         } else {
-           
-            let fullName = name1! + namespace + name2! + " (D)"
-
+           fullName = name1! + namespace + name2! + " (D)"
         }
-         */
-        
+       
         print(fullName)
         
         cell.textLabel?.text = fullName
@@ -83,5 +79,13 @@ class SenateTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+       
+        print("this works")
+        
+        performSegue(withIdentifier: "segue1", sender: self)
+        
+    }
 
 }
