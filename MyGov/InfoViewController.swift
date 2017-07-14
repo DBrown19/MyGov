@@ -56,12 +56,15 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate 
         
         
         if senator?.senateParty == "republican" {
-            view.backgroundColor = UIColor.red
+            view.backgroundColor = UIColor(red: 0.686, green: 0.01176, blue: 0.03529, alpha:1.0)
         } else if senator?.senateParty == "democrat" {
-            view.backgroundColor = UIColor.cyan
+            view.backgroundColor = UIColor(red: 0.1519, green: 0.15196, blue: 0.4176, alpha:1.0)
+            
         } else {
-            view.backgroundColor = UIColor.yellow
+            view.backgroundColor = UIColor(red: 0.9529, green: 0.9294, blue: 0.749, alpha:1.0)
+            bioLabel.textColor = UIColor.black
         }
+ 
 
         if ((senator?.senateEmail) != nil) {
                 emailButton.isHidden = false
@@ -76,6 +79,11 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate 
         nameLabel.text = (senator?.firstName)! + " " + (senator?.lastName)!
         stateLabel.text = senator?.stateName
         bioLabel.text = senator?.senateBio
+        bioLabel.textColor = UIColor.white
+        nameLabel.textColor = UIColor.white
+        stateLabel.textColor = UIColor.white
+        partyLabel.textColor = UIColor.white
+        
         
         if senator?.senateParty == "republican" {
             partyLabel.text = "Republican"
@@ -201,8 +209,9 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate 
         }
         
          */
-        mailComposerVC.setSubject("Hello")
-        mailComposerVC.setMessageBody("How're you doing", isHTML: false)
+        mailComposerVC.setToRecipients([(senator?.senateEmail)!])
+        mailComposerVC.setSubject("message from a consituent")
+        mailComposerVC.setMessageBody("Hello senator " + (senator?.lastName)! + ". I am one of your consituents of the proud state of " + (senator?.stateName)! + " emailing you about", isHTML: false)
         
         return mailComposerVC
         
