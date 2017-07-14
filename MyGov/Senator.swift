@@ -17,6 +17,13 @@ class Senator: Glossy, Decodable {
     var firstName: String?
     var lastName: String?
     var senateParty: String?
+    var senateBio: String?
+    var senateContact: String?
+    var senatePicture: String?
+    var senateEmail: String?
+    var senateFacebook: String?
+    var senateTwitter: String?
+    var senateWebsite: String?
     
     init?() {
         self.key = ""
@@ -31,7 +38,13 @@ class Senator: Glossy, Decodable {
         self.firstName = "first_name" <~~ json
         self.lastName  = "last_name" <~~ json
         self.senateParty = "party" <~~ json
-        
+        self.senateBio = "biography" <~~ json
+        self.senatePicture = "photo_url" <~~ json
+        self.senateEmail = "email" <~~ json
+        self.senateFacebook = "facebook_url" <~~ json
+        self.senateTwitter = "twitter_url" <~~ json
+        self.senateWebsite = "website" <~~ json
+        self.senateContact = "contact_page" <~~ json
     }
     
     func toJSON() -> JSON? {

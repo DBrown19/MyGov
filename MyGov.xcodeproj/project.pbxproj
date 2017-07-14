@@ -144,6 +144,7 @@
 				TargetAttributes = {
 					635ED8AD1F138DCF0039F36D = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = X62Z6HXVND;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -388,6 +389,7 @@
 			baseConfigurationReference = 74A715529CD92C4A504D9F4C /* Pods-MyGov.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X62Z6HXVND;
 				INFOPLIST_FILE = MyGov/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "David-Brown.MyGov";
@@ -401,6 +403,7 @@
 			baseConfigurationReference = B3320302B084EA5A54015C1F /* Pods-MyGov.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X62Z6HXVND;
 				INFOPLIST_FILE = MyGov/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "David-Brown.MyGov";
